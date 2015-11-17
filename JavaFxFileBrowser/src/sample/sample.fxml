@@ -24,7 +24,7 @@
                <contextMenu>
                   <ContextMenu>
                     <items>
-                      <MenuItem fx:id="deleteContext" mnemonicParsing="false" text="Delete" />
+                      <MenuItem fx:id="deleteContext" onAction="#deleteFile" mnemonicParsing="false" text="Delete" />
                     </items>
                   </ContextMenu>
                </contextMenu></TreeView>

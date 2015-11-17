@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -25,8 +26,13 @@ public class Controller implements Initializable {
     private Node pngFile;
 
 
-    @FXML private void deleteFile(){
-        
+    @FXML private void deleteFile(ActionEvent event){
+        TreeItem<File> selectedItem = (TreeItem<File>) treeView.getSelectionModel().selectedItemProperty().getValue();
+        try {
+            selectedItem.getValue().delete();
+        }catch (SecurityException e){
+            e.printStackTrace();
+        }
     }
 
     @Override

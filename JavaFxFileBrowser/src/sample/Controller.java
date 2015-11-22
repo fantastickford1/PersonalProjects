@@ -2,7 +2,6 @@ package sample;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,7 +16,6 @@ import javafx.scene.layout.TilePane;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -38,6 +36,10 @@ public class Controller implements Initializable {
         }
     }
 
+
+
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -52,9 +54,7 @@ public class Controller implements Initializable {
         treeView.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
             @Override
             public void changed(ObservableValue observable, Object oldValue, Object newValue) {
-                TreeItem<File> selectedTreeItem = (TreeItem<File>) newValue;
-                File thisFile = selectedTreeItem.getValue();
-                System.out.println(thisFile.getPath());
+
             }
         });
         ///*->Metodo recursivo*/findFiles(currentDir,null);

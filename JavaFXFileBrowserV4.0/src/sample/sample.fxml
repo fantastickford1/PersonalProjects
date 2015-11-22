@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TilePane fx:id="tilePane" layoutX="276.0" prefHeight="574.0" prefWidth="565.0" />
+      <TreeView fx:id="treeView" prefHeight="574.0" prefWidth="277.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newDirectory" text="New Directory" />
+                <MenuItem mnemonicParsing="false" onAction="#deleteFile" text="Delete" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TreeView>
+   </children>
+</AnchorPane>
